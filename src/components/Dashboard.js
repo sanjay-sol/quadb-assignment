@@ -47,7 +47,7 @@ const Dashboard = () => {
       <div className="mb-10">
         <div className="grid  gap-6 m-4 sm:grid-cols-2 lg:grid-cols-4">
           {/* ////// */}
-          {data1 && data1.filter((profile) =>
+          {data1 ? data1.filter((profile) =>
                 profile.show.name.toLowerCase().includes(search.toLowerCase())
               ).map((profile, index) => (
                 
@@ -108,6 +108,9 @@ const Dashboard = () => {
                   </div>      
                 </div>
               ))
+              : <p className='font-extrabold text-6xl p-14 '>Fetchind Data Please Wait.....</p>
+
+
          }
         </div>
       </div>
